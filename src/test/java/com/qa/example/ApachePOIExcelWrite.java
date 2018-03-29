@@ -1,4 +1,4 @@
-package excel;
+package com.qa.example;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -13,13 +13,13 @@ public class ApachePOIExcelWrite {
 
     private static final String FILE_NAME = System.getProperty("user.dir") + "\\ExcelExample.xlsx";
 
-    public static void main(String[] args) {
+    public void init() {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Datatypes in Java");
         Object[][] datatypes = {
-                {"Username", "Password", "Name"},
-                {"peter.krawiec@qa.com", "Password1!", "Peter Krawiec"},
+                {"Email", "Password", "postcode"},
+                {"peter.krawiec@qa.com", "Password1", "M50 2BB"},
         };
 
         int rowNum = 0;
